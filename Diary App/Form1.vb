@@ -5,10 +5,10 @@ Public Class Form1
 
         Dim lines() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\priority.txt")
 
-        cmbPriority.DataSource = lines
+        cmbFilter.DataSource = lines
     End Sub
 
-    Private Sub cbxpriority_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbPriority.SelectedIndexChanged
+    Private Sub cbxpriority_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbFilter.SelectedIndexChanged
 
     End Sub
 
@@ -16,4 +16,5 @@ Public Class Form1
         Me.Hide()
         Form2.Show()
     End Sub
+
 End Class

@@ -22,62 +22,124 @@ Partial Class Form2
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        ListBox1 = New ListBox()
-        TextBox1 = New TextBox()
+        lstTimeTable = New ListBox()
+        txtinput = New TextBox()
         cmbPriority = New ComboBox()
         btnBack = New Button()
+        lblpreview = New Label()
+        lstTime = New ListBox()
+        btnAdd = New Button()
+        DateTimePicker1 = New DateTimePicker()
         SuspendLayout()
         ' 
-        ' ListBox1
+        ' lstTimeTable
         ' 
-        ListBox1.FormattingEnabled = True
-        ListBox1.ItemHeight = 15
-        ListBox1.Location = New Point(12, 12)
-        ListBox1.Name = "ListBox1"
-        ListBox1.Size = New Size(267, 424)
-        ListBox1.TabIndex = 0
+        lstTimeTable.BackColor = Color.PeachPuff
+        lstTimeTable.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lstTimeTable.FormattingEnabled = True
+        lstTimeTable.ItemHeight = 31
+        lstTimeTable.Location = New Point(138, 42)
+        lstTimeTable.Name = "lstTimeTable"
+        lstTimeTable.Size = New Size(267, 407)
+        lstTimeTable.TabIndex = 0
         ' 
-        ' TextBox1
+        ' txtinput
         ' 
-        TextBox1.Location = New Point(389, 38)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(283, 23)
-        TextBox1.TabIndex = 1
+        txtinput.BackColor = Color.PeachPuff
+        txtinput.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        txtinput.Location = New Point(411, 91)
+        txtinput.Name = "txtinput"
+        txtinput.Size = New Size(377, 38)
+        txtinput.TabIndex = 1
         ' 
         ' cmbPriority
         ' 
+        cmbPriority.BackColor = Color.PeachPuff
+        cmbPriority.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
         cmbPriority.FormattingEnabled = True
-        cmbPriority.Location = New Point(551, 141)
+        cmbPriority.Location = New Point(411, 46)
         cmbPriority.Name = "cmbPriority"
-        cmbPriority.Size = New Size(121, 23)
+        cmbPriority.Size = New Size(121, 39)
         cmbPriority.TabIndex = 2
         ' 
         ' btnBack
         ' 
-        btnBack.Location = New Point(408, 257)
+        btnBack.BackColor = Color.PeachPuff
+        btnBack.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        btnBack.Location = New Point(451, 257)
         btnBack.Name = "btnBack"
         btnBack.Size = New Size(149, 67)
         btnBack.TabIndex = 3
         btnBack.Text = "Back"
-        btnBack.UseVisualStyleBackColor = True
+        btnBack.UseVisualStyleBackColor = False
+        ' 
+        ' lblpreview
+        ' 
+        lblpreview.AutoSize = True
+        lblpreview.BackColor = Color.DarkSalmon
+        lblpreview.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lblpreview.Location = New Point(12, 8)
+        lblpreview.Name = "lblpreview"
+        lblpreview.Size = New Size(94, 31)
+        lblpreview.TabIndex = 4
+        lblpreview.Text = "Preview"
+        ' 
+        ' lstTime
+        ' 
+        lstTime.BackColor = Color.PeachPuff
+        lstTime.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lstTime.FormattingEnabled = True
+        lstTime.ItemHeight = 31
+        lstTime.Location = New Point(12, 42)
+        lstTime.Name = "lstTime"
+        lstTime.Size = New Size(120, 407)
+        lstTime.TabIndex = 7
+        ' 
+        ' btnAdd
+        ' 
+        btnAdd.BackColor = Color.PeachPuff
+        btnAdd.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        btnAdd.Location = New Point(613, 257)
+        btnAdd.Name = "btnAdd"
+        btnAdd.Size = New Size(145, 67)
+        btnAdd.TabIndex = 8
+        btnAdd.Text = "Add"
+        btnAdd.UseVisualStyleBackColor = False
+        ' 
+        ' DateTimePicker1
+        ' 
+        DateTimePicker1.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        DateTimePicker1.Location = New Point(249, 2)
+        DateTimePicker1.Name = "DateTimePicker1"
+        DateTimePicker1.Size = New Size(351, 38)
+        DateTimePicker1.TabIndex = 9
         ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.DarkSalmon
         ClientSize = New Size(800, 450)
+        Controls.Add(DateTimePicker1)
+        Controls.Add(btnAdd)
+        Controls.Add(lstTime)
+        Controls.Add(lblpreview)
         Controls.Add(btnBack)
         Controls.Add(cmbPriority)
-        Controls.Add(TextBox1)
-        Controls.Add(ListBox1)
+        Controls.Add(txtinput)
+        Controls.Add(lstTimeTable)
         Name = "Form2"
         Text = "Form2"
         ResumeLayout(False)
         PerformLayout()
     End Sub
 
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lstTimeTable As ListBox
+    Friend WithEvents txtinput As TextBox
     Friend WithEvents cmbPriority As ComboBox
     Friend WithEvents btnBack As Button
+    Friend WithEvents lblpreview As Label
+    Friend WithEvents lstTime As ListBox
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

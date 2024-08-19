@@ -12,4 +12,17 @@ Public Class Form2
         Me.Hide()
         Form1.Show()
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim Writing As String
+        Writing = txtinput.Text
+        Dim NumbersFile As System.IO.StreamWriter
+        NumbersFile = My.Computer.FileSystem.OpenTextFileWriter("testxml.txt", True)
+        NumbersFile.WriteLine(Writing)
+        NumbersFile.Close()
+        lstTimeTable.Items.Add(Writing)
+        MsgBox(“The details has been saved successfully”)
+        txtinput.Text = ""
+
+    End Sub
 End Class
