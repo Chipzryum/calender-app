@@ -23,33 +23,33 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        cmbFilter = New ComboBox()
+        cmbPriority = New ComboBox()
         btnCreate = New Button()
         lstCalendar = New ListBox()
         lblfilter = New Label()
         btnDelete = New Button()
         BindingSource1 = New BindingSource(components)
         btnFilter = New Button()
-        lstTime = New ListBox()
         DateTimePicker1 = New DateTimePicker()
+        ListBox1 = New ListBox()
         CType(BindingSource1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
-        ' cmbFilter
+        ' cmbPriority
         ' 
-        cmbFilter.BackColor = Color.PeachPuff
-        cmbFilter.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        cmbFilter.FormattingEnabled = True
-        cmbFilter.Location = New Point(500, 44)
-        cmbFilter.Name = "cmbFilter"
-        cmbFilter.Size = New Size(288, 39)
-        cmbFilter.TabIndex = 0
+        cmbPriority.BackColor = Color.PeachPuff
+        cmbPriority.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        cmbPriority.FormattingEnabled = True
+        cmbPriority.Location = New Point(558, 44)
+        cmbPriority.Name = "cmbPriority"
+        cmbPriority.Size = New Size(288, 39)
+        cmbPriority.TabIndex = 0
         ' 
         ' btnCreate
         ' 
         btnCreate.BackColor = Color.PeachPuff
         btnCreate.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnCreate.Location = New Point(487, 339)
+        btnCreate.Location = New Point(618, 398)
         btnCreate.Name = "btnCreate"
         btnCreate.Size = New Size(301, 99)
         btnCreate.TabIndex = 1
@@ -64,14 +64,14 @@ Partial Class Form1
         lstCalendar.ItemHeight = 31
         lstCalendar.Location = New Point(138, 44)
         lstCalendar.Name = "lstCalendar"
-        lstCalendar.Size = New Size(325, 407)
+        lstCalendar.Size = New Size(325, 500)
         lstCalendar.TabIndex = 2
         ' 
         ' lblfilter
         ' 
         lblfilter.AutoSize = True
         lblfilter.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        lblfilter.Location = New Point(716, 1)
+        lblfilter.Location = New Point(480, 47)
         lblfilter.Name = "lblfilter"
         lblfilter.Size = New Size(72, 31)
         lblfilter.TabIndex = 3
@@ -81,7 +81,7 @@ Partial Class Form1
         ' 
         btnDelete.BackColor = Color.PeachPuff
         btnDelete.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnDelete.Location = New Point(487, 234)
+        btnDelete.Location = New Point(618, 293)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(301, 99)
         btnDelete.TabIndex = 4
@@ -92,46 +92,47 @@ Partial Class Form1
         ' 
         btnFilter.BackColor = Color.PeachPuff
         btnFilter.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnFilter.Location = New Point(500, 89)
+        btnFilter.Location = New Point(558, 89)
         btnFilter.Name = "btnFilter"
         btnFilter.Size = New Size(288, 99)
         btnFilter.TabIndex = 5
         btnFilter.Text = "Filter"
         btnFilter.UseVisualStyleBackColor = False
         ' 
-        ' lstTime
-        ' 
-        lstTime.BackColor = Color.PeachPuff
-        lstTime.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        lstTime.FormattingEnabled = True
-        lstTime.ItemHeight = 31
-        lstTime.Location = New Point(12, 42)
-        lstTime.Name = "lstTime"
-        lstTime.Size = New Size(120, 407)
-        lstTime.TabIndex = 6
-        ' 
         ' DateTimePicker1
         ' 
         DateTimePicker1.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        DateTimePicker1.Location = New Point(195, 0)
+        DateTimePicker1.Location = New Point(313, 0)
         DateTimePicker1.Name = "DateTimePicker1"
         DateTimePicker1.Size = New Size(358, 38)
         DateTimePicker1.TabIndex = 10
+        ' 
+        ' ListBox1
+        ' 
+        ListBox1.BackColor = Color.PeachPuff
+        ListBox1.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        ListBox1.FormattingEnabled = True
+        ListBox1.ItemHeight = 31
+        ListBox1.Items.AddRange(New Object() {"5:00", "6:00", "7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00", "19:00", "20:00", "21:00", "22:00"})
+        ListBox1.Location = New Point(12, 44)
+        ListBox1.Name = "ListBox1"
+        ListBox1.Size = New Size(120, 500)
+        ListBox1.TabIndex = 11
         ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSalmon
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(979, 570)
+        Controls.Add(ListBox1)
         Controls.Add(DateTimePicker1)
-        Controls.Add(lstTime)
         Controls.Add(btnFilter)
         Controls.Add(btnDelete)
         Controls.Add(lblfilter)
         Controls.Add(lstCalendar)
         Controls.Add(btnCreate)
-        Controls.Add(cmbFilter)
+        Controls.Add(cmbPriority)
         ForeColor = Color.Black
         Name = "Form1"
         Text = "Welcome, User"
@@ -140,14 +141,14 @@ Partial Class Form1
         PerformLayout()
     End Sub
 
-    Friend WithEvents cmbFilter As ComboBox
+    Friend WithEvents cmbPriority As ComboBox
     Friend WithEvents btnCreate As Button
     Friend WithEvents lstCalendar As ListBox
     Friend WithEvents lblfilter As Label
     Friend WithEvents btnDelete As Button
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents btnFilter As Button
-    Friend WithEvents lstTime As ListBox
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents ListBox1 As ListBox
 
 End Class

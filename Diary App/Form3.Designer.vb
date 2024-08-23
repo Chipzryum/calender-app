@@ -32,7 +32,7 @@ Partial Class Form3
         ' 
         lblTitle.AutoSize = True
         lblTitle.Font = New Font("Yu Gothic UI", 48F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblTitle.Location = New Point(226, 9)
+        lblTitle.Location = New Point(303, 9)
         lblTitle.Name = "lblTitle"
         lblTitle.Size = New Size(329, 86)
         lblTitle.TabIndex = 0
@@ -41,7 +41,7 @@ Partial Class Form3
         ' txtName
         ' 
         txtName.BackColor = Color.PeachPuff
-        txtName.Location = New Point(366, 197)
+        txtName.Location = New Point(407, 197)
         txtName.Name = "txtName"
         txtName.Size = New Size(100, 23)
         txtName.TabIndex = 1
@@ -50,7 +50,7 @@ Partial Class Form3
         ' 
         lblName.AutoSize = True
         lblName.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        lblName.Location = New Point(271, 191)
+        lblName.Location = New Point(279, 191)
         lblName.Name = "lblName"
         lblName.Size = New Size(77, 31)
         lblName.TabIndex = 2
@@ -60,7 +60,7 @@ Partial Class Form3
         ' 
         btnGo.BackColor = Color.PeachPuff
         btnGo.Font = New Font("Vic Mod Cursive", 24F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        btnGo.Location = New Point(306, 281)
+        btnGo.Location = New Point(366, 308)
         btnGo.Name = "btnGo"
         btnGo.Size = New Size(199, 102)
         btnGo.TabIndex = 3
@@ -72,13 +72,13 @@ Partial Class Form3
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSalmon
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(979, 570)
         Controls.Add(btnGo)
         Controls.Add(lblName)
         Controls.Add(txtName)
         Controls.Add(lblTitle)
         Name = "Form3"
-        Text = "Form3"
+        Text = "Home"
         ResumeLayout(False)
         PerformLayout()
     End Sub

@@ -1,11 +1,15 @@
 ﻿Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 Public Class Form2
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        Dim lines() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\priority.txt")
+        Dim priority() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\priority.txt")
 
-        cmbPriority.DataSource = lines
+        cmbPriority.DataSource = priority
+
+        Dim timetable() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\testxml.txt")
+
+        lstCalendar.DataSource = timetable
     End Sub
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
@@ -20,7 +24,7 @@ Public Class Form2
         NumbersFile = My.Computer.FileSystem.OpenTextFileWriter("testxml.txt", True)
         NumbersFile.WriteLine(Writing)
         NumbersFile.Close()
-        lstTimeTable.Items.Add(Writing)
+        lstCalendar.Items.Add(Writing)
         MsgBox(“The details has been saved successfully”)
         txtinput.Text = ""
 
