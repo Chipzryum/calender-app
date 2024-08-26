@@ -130,7 +130,7 @@ Partial Class Form2
         Controls.Add(txtinput)
         Controls.Add(lstCalendar)
         Name = "Form2"
-        Text = "Form2"
+        Text = "    "
         ResumeLayout(False)
         PerformLayout()
     End Sub

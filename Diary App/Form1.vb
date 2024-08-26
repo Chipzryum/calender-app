@@ -9,7 +9,7 @@ Public Class Form1
 
         cmbPriority.DataSource = priority
 
-        Dim lines() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\testxml.txt")
+        Dim lines() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\timetable.txt")
 
         lstCalendar.DataSource = lines
     End Sub

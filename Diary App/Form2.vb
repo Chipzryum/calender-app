@@ -7,7 +7,7 @@ Public Class Form2
 
         cmbPriority.DataSource = priority
 
-        Dim timetable() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\testxml.txt")
+        Dim timetable() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\timetable.txt")
 
         lstCalendar.DataSource = timetable
     End Sub
@@ -21,10 +21,10 @@ Public Class Form2
         Dim Writing As String
         Writing = txtinput.Text
         Dim NumbersFile As System.IO.StreamWriter
-        NumbersFile = My.Computer.FileSystem.OpenTextFileWriter("testxml.txt", True)
+        NumbersFile = My.Computer.FileSystem.OpenTextFileWriter("timetable.txt", True)
         NumbersFile.WriteLine(Writing)
         NumbersFile.Close()
-        lstCalendar.Items.Add(Writing)
+        lstCalendar.Items.Add("Writing")
         MsgBox(“The details has been saved successfully”)
         txtinput.Text = ""
 
