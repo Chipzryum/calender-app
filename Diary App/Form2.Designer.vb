@@ -30,6 +30,11 @@ Partial Class Form2
         lstTime = New ListBox()
         btnAdd = New Button()
         DateTimePicker1 = New DateTimePicker()
+        txtTime = New TextBox()
+        SaveFileDialog1 = New SaveFileDialog()
+        lbltime = New Label()
+        lblinput = New Label()
+        lblpriority = New Label()
         SuspendLayout()
         ' 
         ' lstCalendar
@@ -47,9 +52,9 @@ Partial Class Form2
         ' 
         txtinput.BackColor = Color.PeachPuff
         txtinput.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        txtinput.Location = New Point(548, 303)
+        txtinput.Location = New Point(715, 303)
         txtinput.Name = "txtinput"
-        txtinput.Size = New Size(377, 38)
+        txtinput.Size = New Size(210, 38)
         txtinput.TabIndex = 1
         ' 
         ' cmbPriority
@@ -57,7 +62,7 @@ Partial Class Form2
         cmbPriority.BackColor = Color.PeachPuff
         cmbPriority.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
         cmbPriority.FormattingEnabled = True
-        cmbPriority.Location = New Point(548, 84)
+        cmbPriority.Location = New Point(715, 121)
         cmbPriority.Name = "cmbPriority"
         cmbPriority.Size = New Size(121, 39)
         cmbPriority.TabIndex = 2
@@ -115,12 +120,55 @@ Partial Class Form2
         DateTimePicker1.Size = New Size(351, 38)
         DateTimePicker1.TabIndex = 9
         ' 
+        ' txtTime
+        ' 
+        txtTime.BackColor = Color.PeachPuff
+        txtTime.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        txtTime.Location = New Point(471, 303)
+        txtTime.Name = "txtTime"
+        txtTime.Size = New Size(210, 38)
+        txtTime.TabIndex = 10
+        ' 
+        ' lbltime
+        ' 
+        lbltime.AutoSize = True
+        lbltime.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lbltime.Location = New Point(471, 269)
+        lbltime.Name = "lbltime"
+        lbltime.Size = New Size(67, 31)
+        lbltime.TabIndex = 11
+        lbltime.Text = "Time:"
+        ' 
+        ' lblinput
+        ' 
+        lblinput.AutoSize = True
+        lblinput.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lblinput.Location = New Point(715, 269)
+        lblinput.Name = "lblinput"
+        lblinput.Size = New Size(63, 31)
+        lblinput.TabIndex = 12
+        lblinput.Text = "Text:"
+        ' 
+        ' lblpriority
+        ' 
+        lblpriority.AutoSize = True
+        lblpriority.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
+        lblpriority.Location = New Point(616, 124)
+        lblpriority.Name = "lblpriority"
+        lblpriority.Size = New Size(93, 31)
+        lblpriority.TabIndex = 13
+        lblpriority.Text = "Priority"
+        ' 
         ' Form2
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSalmon
         ClientSize = New Size(979, 570)
+        Controls.Add(lblpriority)
+        Controls.Add(lblinput)
+        Controls.Add(lbltime)
+        Controls.Add(txtTime)
         Controls.Add(DateTimePicker1)
         Controls.Add(btnAdd)
         Controls.Add(lstTime)
@@ -143,4 +191,9 @@ Partial Class Form2
     Friend WithEvents lstTime As ListBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents txtTime As TextBox
+    Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents lbltime As Label
+    Friend WithEvents lblinput As Label
+    Friend WithEvents lblpriority As Label
 End Class

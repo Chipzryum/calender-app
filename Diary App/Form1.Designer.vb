@@ -22,18 +22,14 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        components = New ComponentModel.Container()
         cmbPriority = New ComboBox()
         btnCreate = New Button()
         lstCalendar = New ListBox()
         lblfilter = New Label()
         btnDelete = New Button()
-        BindingSource1 = New BindingSource(components)
         btnFilter = New Button()
         DateTimePicker1 = New DateTimePicker()
         ListBox1 = New ListBox()
-        btnSave = New Button()
-        CType(BindingSource1, ComponentModel.ISupportInitialize).BeginInit()
         SuspendLayout()
         ' 
         ' cmbPriority
@@ -50,7 +46,7 @@ Partial Class Form1
         ' 
         btnCreate.BackColor = Color.PeachPuff
         btnCreate.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnCreate.Location = New Point(509, 299)
+        btnCreate.Location = New Point(480, 445)
         btnCreate.Name = "btnCreate"
         btnCreate.Size = New Size(301, 99)
         btnCreate.TabIndex = 1
@@ -82,7 +78,7 @@ Partial Class Form1
         ' 
         btnDelete.BackColor = Color.PeachPuff
         btnDelete.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnDelete.Location = New Point(650, 194)
+        btnDelete.Location = New Point(648, 234)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(301, 99)
         btnDelete.TabIndex = 4
@@ -120,24 +116,12 @@ Partial Class Form1
         ListBox1.Size = New Size(120, 500)
         ListBox1.TabIndex = 11
         ' 
-        ' btnSave
-        ' 
-        btnSave.BackColor = Color.PeachPuff
-        btnSave.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnSave.Location = New Point(650, 404)
-        btnSave.Name = "btnSave"
-        btnSave.Size = New Size(301, 99)
-        btnSave.TabIndex = 12
-        btnSave.Text = "Save"
-        btnSave.UseVisualStyleBackColor = False
-        ' 
         ' Form1
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.DarkSalmon
         ClientSize = New Size(979, 570)
-        Controls.Add(btnSave)
         Controls.Add(ListBox1)
         Controls.Add(DateTimePicker1)
         Controls.Add(btnFilter)
@@ -149,7 +133,6 @@ Partial Class Form1
         ForeColor = Color.Black
         Name = "Form1"
         Text = "Welcome, User"
-        CType(BindingSource1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
         PerformLayout()
     End Sub
@@ -159,10 +142,8 @@ Partial Class Form1
     Friend WithEvents lstCalendar As ListBox
     Friend WithEvents lblfilter As Label
     Friend WithEvents btnDelete As Button
-    Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents btnFilter As Button
     Friend WithEvents DateTimePicker1 As DateTimePicker
     Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents btnSave As Button
 
 End Class
