@@ -1,17 +1,32 @@
 ﻿Imports System.IO
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock
 Imports System.Xml
 Public Class Form2
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        ' READING from file priority combo box
 
         Dim priority() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\priority.txt")
 
         cmbPriority.Items.AddRange(priority)
 
+        ' READING from file time table text
+
         Dim timetable() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\timetable.txt")
 
         lstCalendar.Items.AddRange(timetable)
+
+        ' READING from file times
+
+        Dim TimeValue() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\timetable.txt")
+
+        lstTime.Items.AddRange(TimeValue)
+
+
     End Sub
+
+
 
     Private Sub btnBack_Click(sender As Object, e As EventArgs) Handles btnBack.Click
         Me.Hide()
@@ -32,16 +47,16 @@ Public Class Form2
         lstCalendar.Items.AddRange(timetable)
 
         'getting time from user input
-        Dim Time As String
-        Time = txtTime.Text
+        Dim TimeInBox As String
+        TimeInBox = txtTime.Text
         Dim TimeFile As System.IO.StreamWriter
-        TimeFile = My.Computer.FileSystem.OpenTextFileWriter("Time.txt", True)
-        ' writing to the listbox timetable
-        TimeFile.WriteLine(Writing)
+        TimeFile = My.Computer.FileSystem.OpenTextFileWriter("Time1.txt", True)
+        ' writing to the listbox timebox
+        TimeFile.WriteLine(TimeInBox)
         TimeFile.Close()
-        Dim TimeValue() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\Time.txt")
+        Dim Time1() As String = File.ReadAllLines("C:\Users\SEN0018\source\repos\Diary App\Diary App\bin\Debug\net8.0-windows\Time.txt")
         ' updating the listbox for next use by writing to file
-        lstTime.Items.AddRange(TimeValue)
+        lstTime.Items.AddRange(Time1)
 
 
 
@@ -51,6 +66,6 @@ Public Class Form2
         txtinput.Text = ""
         txtTime.Text = ""
 
-
+        ' fix the thing writing multiple times
     End Sub
 End Class
