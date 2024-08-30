@@ -46,7 +46,7 @@ Partial Class Form1
         ' 
         btnCreate.BackColor = Color.PeachPuff
         btnCreate.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnCreate.Location = New Point(480, 445)
+        btnCreate.Location = New Point(498, 339)
         btnCreate.Name = "btnCreate"
         btnCreate.Size = New Size(301, 99)
         btnCreate.TabIndex = 1
@@ -78,7 +78,7 @@ Partial Class Form1
         ' 
         btnDelete.BackColor = Color.PeachPuff
         btnDelete.Font = New Font("Vic Mod Cursive", 14.25F, FontStyle.Bold)
-        btnDelete.Location = New Point(648, 234)
+        btnDelete.Location = New Point(583, 203)
         btnDelete.Name = "btnDelete"
         btnDelete.Size = New Size(301, 99)
         btnDelete.TabIndex = 4
